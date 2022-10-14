@@ -11,6 +11,7 @@ Leser sammen gjennom HowWeRoll-oppgaven.
 startet på oppgave 1:
 Undersøker oppgaven og får en forståelse for hva alle kan, og eventuelt hva de ikke kan.
 Diskuterer blant oss i gruppen på hvordan vi skal løse oppgaven, men velger å ikke planlegge oppgaven i dag slik at vi kan undersøke mer.
+Christian: La til HWR results html sheet og How we Roll html sheet inn i href slik at de er fungerende på navbar på koden.
 
 *Dato/Oktober 2022
 
