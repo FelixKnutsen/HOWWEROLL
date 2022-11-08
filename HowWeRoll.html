@@ -1,10 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" type="text/css" href="HowWeRoll.css"/>
     <meta charset="UTF-8">
     <title>How We Roll</title>
+<style>
+ .card {
+ /* legger til skygge for å lage "fremhevende visittkorteffekt" */
+     box-shadow: 0 5px 10px 0 rgba(0,0,0,2);
+     transition: 0.5s;
+     width: 250px;
+     float: left;
+     margin-top: 45px;
+     margin-left: 40px;
+     margin-right: 40px;
+     margin-bottom: 30px;
+     /* visittkortkode hentet fra https://www.w3schools.com/howto/howto_css_cards.asp og omgjort til eget bruk og ønske */
+ }
+ /* legger til "mouse-over" til visittkortet slik at det skal gi en dypere farge, slik at det blir en markant endring for å vise at man holder over visittkortet */
+ .card:hover {
+     box-shadow: 0 10px 20px 0 rgba(0,0,0,2);
+ }
+ /* legger deretter til padding på containeren "tekstdelen av visittkortet" for å tydliggjøre teksten */
+ .container {
+     padding: 6px 18px;
+ }
+</style>
+
 </head>
 <body>
-
+<div class="card">
+<img src="IMAGES/Christian%20Portrett%20visittkort%20eks.1.jpg"; alt="150px"; height="150px">
+<div class="container">
+    <h4><b> Christian Eieland Ålykkja</b></h4>
+    <p>IT og informasjonsystemer student</p>
+</div>
+</div>
+<div class="card">
+    <img src=""; alt="150px"; height="100px">
+    <div class="container">
+        <h4><b> Felix</b></h4>
+        <p>IT og informasjonsystemer student</p>
+    </div>
+</div>
+<div class="card">
+    <img src=""; alt="150px"; height="100px">
+    <div class="container">
+        <h4><b> The Vi</b></h4>
+        <p>IT og informasjonsystemer student</p>
+    </div>
+</div>
+<div class="card">
+    <img src=""; alt="150px"; height="100px">
+    <div class="container">
+        <h4><b> Nam</b></h4>
+        <p>IT og informasjonsystemer student</p>
+    </div>
+</div>
+<div class="card">
+    <img src=""; alt="150px"; height="100px">
+    <div class="container">
+        <h4><b> Mohammed Showgi</b></h4>
+        <p>IT og informasjonsystemer student</p>
+    </div>
+</div>
+<div class="card">
+    <img src=""; alt="150px"; height="100px">
+    <div class="container">
+        <h4><b> Adrian </b></h4>
+        <p>IT og informasjonsystemer student</p>
+    </div>
+</div>
+<div class="card">
+    <img src=""; alt="150px"; height="100px">
+    <div class="container">
+        <h4><b> Daniel </b></h4>
+        <p>IT og informasjonsystemer student</p>
+    </div>
+</div>
 </body>
 </html>
