@@ -2,9 +2,247 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>How We Roll Result</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HowWeRoll</title>
+    <style>
+        /*CSS*/
+        body{
+            background-color: antiquewhite;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: black;
+        }
+
+        .nav li {
+            float: left;
+            border-right:1px solid #bbb;
+        }
+
+
+        .nav li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .nav li a:hover:not(.active) {
+            background-color: white;
+            color: black;
+        }
+
+        .nav .active {
+            background-color: Darkred;
+        }
+
+        .footer {
+            list-style-type: none;
+            position: fixed;
+            overflow: hidden;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            color: white;
+            background-color: black;
+            text-align: center;
+        }
+
+        .footer li {
+            float: left;
+            border-right:1px solid #bbb;
+        }
+
+        .footer li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .footer li a:hover:not(.active) {
+            background-color: white;
+            color: black;
+        }
+
+        .month {
+            padding: 70px 25px;
+            width: 100%;
+            background: Black;
+            text-align: center;
+        }
+
+        .month ul li {
+            color: white;
+            font-size: 30px;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .month .prev {
+            float: left;
+            padding-top: 10px;
+        }
+
+        .month .next {
+            float: right;
+            padding-top: 10px;
+        }
+
+        .month center {
+            text-align: center;
+            border: 3px solid;
+        }
+
+        .Uke {
+            margin: 0;
+            padding: 10px 0;
+            background-color: #ddd;
+        }
+
+        .Uke li {
+            display: inline-block;
+            width: 13.6%;
+            color: #666;
+            text-align: center;
+        }
+
+        .Dag {
+            padding: 10px 0;
+            background: #eee;
+            margin: 0;
+        }
+
+        .Dag li {
+            list-style-type: none;
+            display: inline-block;
+            width: 13.6%;
+            text-align: center;
+            margin-bottom: 5px;
+            font-size:12px;
+            color: #777;
+        }
+
+
+
+        .Dag li .active {
+            padding: 5px;
+            background: Lime;
+            color: white
+        }
+
+        .Dag li .active2 {
+            padding: 5px;
+            background: Yellow;
+            color: white
+        }
+
+        .Dag li .active3 {
+            padding: 5px;
+            background: Red;
+            color: white
+        }
+
+        .Dag li .NotMonth {
+            padding: 5px;
+            color: darkgrey
+        }
+        h1 {
+            text-align: center;
+        }
+
+    </style>
 </head>
 <body>
+<ul class="nav">
+    <li><a class="active" href="https://felixknutsen.github.io/HOWWEROLL/">Home</a></li>
+    <li style="float: right"><a href="HWR_Result.html">HWR Result</a></li>
+    <li style="float: right"><a href="HowWeRoll.html">How we roll</a></li>
+    <li style="float: right"><a href="https://github.com/FelixKnutsen/HowWeRoll">Github</a></li>
+</ul>
+
+
+<h1>7B Kalender</h1>
+
+<div class="month">
+    <ul>
+        <li class="prev">&#10094;</li>
+        <li class="next">&#10095;</li>
+        <li>November<br>
+            <span style="font-size:18px">2022</span>
+        </li>
+    </ul>
+</div>
+
+<ul class="Uke">
+    <li>Mandag</li>
+    <li>Tirsdag</li>
+    <li>Onsdag</li>
+    <li>Torsdag</li>
+    <li>Fredag</li>
+    <li>Lørdag</li>
+    <li>Søndag</li>
+</ul>
+
+<ul class="Dag">
+    <li><span class="NotMonth">31</span></li>
+    <li><span class="active3">1</span></li>
+    <li><span class="active3">2</span></li>
+    <li><span class="active2">3</span></li>
+    <li><span class="active">4</span></li>
+    <li><span class="active2">5</span></li>
+    <li><span class="active">6</span></li>
+    <li><span class="active">7</span></li>
+    <li><span class="active">8</span></li>
+    <li><span class="active3">9</span></li>
+    <li><span class="active">10</span></li>
+    <li><span class="active2">11</span></li>
+    <li><span class="active3">12</span></li>
+    <li><span class="active2">13</span></li>
+    <li><span class="active">14</span></li>
+    <li><span class="active3">15</span></li>
+    <li><span class="active">16</span></li>
+    <li><span class="active2">17</span></li>
+    <li><span class="active3">18</span></li>
+    <li><span class="active">19</span></li>
+    <li><span class="active">20</span></li>
+    <li><span class="active3">21</span></li>
+    <li><span class="active">22</span></li>
+    <li><span class="active3">23</span></li>
+    <li><span class="active">24</span></li>
+    <li><span class="active">25</span></li>
+    <li><span class="active2">26</span></li>
+    <li><span class="active2">27</span></li>
+    <li><span class="active2">28</span></li>
+    <li><span class="active">29</span></li>
+    <li><span class="active">30</span></li>
+    <li><span class="NotMonth">1</span></li>
+    <li><span class="NotMonth">2</span></li>
+    <li><span class="NotMonth">3</span></li>
+    <li><span class="NotMonth">4</span></li>
+
+</ul>
+
+<div class="footer">
+    <li style="float: left"><a href="Insert Link">Created by group 7B of UIA</a></li>
+    <li style="float: right"><a href="Insert Link">Credits</a></li>
+</div>
+
+<script>
+    /* javascript her*/
+</script>
+
 
 </body>
 </html>
