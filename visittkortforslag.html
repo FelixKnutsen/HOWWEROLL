@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="mystyle2.css"/>
+    <title>visittkort forslag</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+<section>
+    <ul>
+        <li><a class="active" href="index.html">Home</a></li>
+        <li style="float: right"><a href="HWR_Result.html">HWR Result</a></li>
+        <li style="float: right"><a href="HowWeRoll.html">How we roll</a></li>
+        <li style="float: right"><a href="https://github.com/FelixKnutsen/HowWeRoll" target="_blank">Github</a></li>
+        <li style="float: right"><a href="https://www.figma.com/file/PBKyIuJsruxhxKZUqXUKFL/HOW-WE-ROLL-7b?node-id=0%3A1" target="_blank">Figma</a></li>
+    </ul>
+</section>
+<div class="rammeBoks">
+    <div class="bildeBoks">
+        <h3 style="font-weight: bold; text-align: center;"> Trykk på en av medlemmene for mer informasjon!<h3/>
+            <div class="container">
+                <img id="bilde1" onclick="myFunction(); focusRed()" src="avatarprofile.png" alt="avatar" style="border-radius: 80%; border: 5px solid #555; width: 150px; height: 150px; margin-top: 75px; position: absolute">
+                <div class="middle">
+                    <div class="text">Thevi</div>
+
+                </div>
+
+            </div>
+            <img id="bilde2" onclick="myFunction2(); focusBlue();" src="avatarprofile.png" alt="avatar"  style="border-radius: 80%; border: 5px solid #555; width: 150px; height: 150px; margin-left: 160px; margin-top: 0px; position: absolute;">
+            <img id="bilde3" src="avatarprofile.png" alt="avatar"  style="border-radius: 80%; border: 5px solid #555; width: 150px; height: 150px; margin-top: 75px; margin-left: 318px; position: absolute;">
+            <img id="bilde4" src="avatarprofile.png" alt="avatar"  style="border-radius: 80%; border: 5px solid #555; width: 150px; height: 150px; margin-top: 180px; margin-left: 160px; position: absolute;">
+            <img id="bilde5" src="avatarprofile.png" alt="avatar"  style="border-radius: 80%; border: 5px solid #555; width: 150px; height: 150px; margin-top: 275px;  position: absolute;">
+            <img id="bilde6" src="avatarprofile.png" alt="avatar"  style="border-radius: 80%; border: 5px solid #555; width: 150px; height: 150px; margin-top: 275px;  margin-left: 318px; position: absolute;">
+            <img id="bilde7" src="avatarprofile.png" alt="avatar"  style="border-radius: 80%; border: 5px solid #555; width: 150px; height: 150px; margin-top: 360px;  margin-left: 160px; position: absolute;">
+
+    </div>
+    <div id="informasjonBoks">
+        <h2 class="navn1"> Navn </h2>
+        <p style="text-align: center"> Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info
+            Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info
+            Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info
+            Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info
+            Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info </p>
+        <h3> Bilde </h3>
+    </div>
+</div>
+
+<div id="informasjonBoks2">
+    <h2 class="navn2"> Navn2
+    </h2>
+    <div>
+        <p style="margin-left: 50px; text-align: center"> Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info
+            Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info
+            Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info
+            Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info
+            Masse info Masse info Masse info Masse info Masse info Masse info Masse info Masse info </p>
+        <h3> Bilde2 </h3>
+    </div>
+</div>
+
+<script>function myFunction() {
+    var x = document.getElementById("informasjonBoks");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+function focusBlue() {
+    document.getElementById('informasjonBoks').style.zIndex = -1;
+    document.getElementById('informasjonBoks2').style.zIndex = 1;
+}
+
+</script>
+
+<script>
+    function myFunction2() {
+        var x = document.getElementById("informasjonBoks2");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+    function focusRed() {
+        document.getElementById('informasjonBoks').style.zIndex =  1;
+        document.getElementById('informasjonBoks2').style.zIndex = -1;
+    }
+</script>
+
+
+<div class="footer">
+    <li style="float: left"><a href="Insert Link">Created by group 7B of UIA</a></li>
+    <li style="float: right"><a href="Insert Link">Credits</a></li>
+</div>
+
+</body>
+</html>
