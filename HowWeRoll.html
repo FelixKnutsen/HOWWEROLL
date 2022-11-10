@@ -5,6 +5,14 @@
     <meta charset="UTF-8">
     <title>How We Roll</title>
 <style>
+
+    body{
+        background-color: antiquewhite;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
  .card {
  /* legger til skygge for å lage "fremhevende visittkorteffekt" */
      box-shadow: 0 5px 10px 0 rgba(0,0,0,2);
@@ -15,6 +23,7 @@
      margin-left: 40px;
      margin-right: 40px;
      margin-bottom: 30px;
+     background-color: whitesmoke;
      /* visittkortkode hentet fra https://www.w3schools.com/howto/howto_css_cards.asp og omgjort til eget bruk og ønske */
  }
  /* legger til "mouse-over" til visittkortet slik at det skal gi en dypere farge, slik at det blir en markant endring for å vise at man holder over visittkortet */
@@ -25,10 +34,63 @@
  .container {
      padding: 6px 18px;
  }
+
+ .active {
+     background-color: Darkred;
+ }
+
+
+
+ ul {
+     list-style-type: none;
+     margin: 0;
+     padding: 0;
+     overflow: hidden;
+     background-color: black;
+ }
+
+ li {
+     float: left;
+     border-right:1px solid #bbb;
+ }
+
+
+ li a {
+     display: block;
+     color: white;
+     text-align: center;
+     padding: 14px 16px;
+     text-decoration: none;
+ }
+
+ li a:hover:not(.active) {
+     background-color: white;
+     color: black;
+ }
+
+ .footer {
+     list-style-type: none;
+     position: fixed;
+     overflow: hidden;
+     left: 0;
+     bottom: 0;
+     width: 100%;
+     color: white;
+     background-color: black;
+     text-align: center;
+ }
 </style>
 
 </head>
 <body>
+<ul>
+    <li><a class="active" href="#home">Home</a></li>
+    <li style="float: right"><a href="HWR_Result.html">HWR Result</a></li>
+    <li style="float: right"><a href="HowWeRoll.html">How we roll</a></li>
+    <li style="float: right"><a href="https://github.com/FelixKnutsen/HowWeRoll">Github</a></li>
+</ul>
+
+
 <div class="card">
 <img src="IMAGES/Christian%20Portrett%20visittkort%20eks.1.jpg"; alt="150px"; height="150px">
 <div class="container">
@@ -78,5 +140,10 @@
         <p>IT og informasjonsystemer student</p>
     </div>
 </div>
+<div class="footer">
+    <li style="float: left"><a href="Insert Link">Created by group 7B of UIA</a></li>
+    <li style="float: right"><a href="Insert Link">Credits</a></li>
+</div>
+
 </body>
 </html>
