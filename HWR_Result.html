@@ -76,7 +76,7 @@
         }
 
         .month {
-            padding: 70px 25px;
+            padding: 50px 25px;
             width: 100%;
             background: Black;
             text-align: center;
@@ -93,11 +93,13 @@
         .month .prev {
             float: left;
             padding-top: 10px;
+            margin: 0;
         }
 
         .month .next {
             float: right;
             padding-top: 10px;
+            margin-right: 55px;
         }
 
         .month center {
@@ -106,8 +108,8 @@
         }
 
         .Uke {
-            margin: 0;
-            padding: 10px 0;
+            padding: 15px 25px;
+            width: 100%;
             background-color: #ddd;
         }
 
@@ -119,7 +121,8 @@
         }
 
         .Dag {
-            padding: 10px 0;
+            padding: 30px 25px;
+            width: 100%;
             background: #eee;
             margin: 0;
         }
@@ -129,47 +132,54 @@
             display: inline-block;
             width: 13.6%;
             text-align: center;
-            margin-bottom: 5px;
-            font-size:12px;
+            margin-bottom: 12px;
+            margin-top: 12px;
+            font-size:15px;
             color: #777;
         }
 
-
-
         .Dag li .active {
-            padding: 5px;
+            padding: 10px 13.6%;
             background: Lime;
             color: white
         }
 
         .Dag li .active2 {
-            padding: 5px;
+            padding: 10px 13.6%;
             background: Yellow;
             color: white
         }
 
         .Dag li .active3 {
-            padding: 5px;
+            padding: 10px 13.6%;
             background: Red;
             color: white
         }
 
         .Dag li .NotMonth {
-            padding: 5px;
+            padding: 10px 13.6%;
             color: darkgrey
         }
         h1 {
             text-align: center;
         }
 
+        .margin {
+            margin: 0;
+            padding: 15px;
+            background-color: #ddd;
+        }
+
+
+
     </style>
 </head>
 <body>
 <ul class="nav">
     <li><a class="active" href="https://felixknutsen.github.io/HOWWEROLL/">Home</a></li>
-    <li style="float: right"><a href="HWR_Result.html">HWR Result</a></li>
-    <li style="float: right"><a href="HowWeRoll.html">How we roll</a></li>
-    <li style="float: right"><a href="https://github.com/FelixKnutsen/HowWeRoll">Github</a></li>
+    <li style= "float: right"><a href="HWR_Result.html">HWR Result</a></li>
+    <li style= "float: right"><a href="HowWeRoll.html">How we roll</a></li>
+    <li style= "float: right"><a href="https://github.com/FelixKnutsen/HowWeRoll">Github</a></li>
 </ul>
 
 
@@ -231,13 +241,14 @@
     <li><span class="NotMonth">2</span></li>
     <li><span class="NotMonth">3</span></li>
     <li><span class="NotMonth">4</span></li>
-
 </ul>
 
-<div class="footer">
-    <li style="float: left"><a href="Insert Link">Created by group 7B of UIA</a></li>
-    <li style="float: right"><a href="Insert Link">Credits</a></li>
-</div>
+<ul class="margin"></ul>
+
+<ul class="footer">
+    <li style= "float: left"><a href="https://github.com/FelixKnutsen/HowWeRoll">Created by group 7B of UIA</a></li>
+    <li style= "float: right"><a href="https://github.com/FelixKnutsen/HowWeRoll">Credits</a></li>
+</ul>
 
 <script>
     /* javascript her*/
