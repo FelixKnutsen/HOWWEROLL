@@ -57,4 +57,6 @@ Kombinerer wireframes/sketcher og lager sketcher på hvordan nettsiden skal se u
 :::::::::::::::<br>
 *8./November 2022
 Fikset små ting på scetchene og prøvde å planlegge slik at alle vet hva de skal gjøre slik at vi kan starte å kode nettsiden. <br>
+Ble enige om at vi deler opp de forskjellige sidene, og legger inn det vi selv har designet inn på html og css. 
 :::::::::::::::
+
