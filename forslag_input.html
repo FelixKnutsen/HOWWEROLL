@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="forslag_input.css">
+    <title>Forslag input felt</title>
+</head>
+<body>
+
+<div class="container">
+    <div class="forms">
+        <form id="temp_form"><h1>Hvilket klokkeslett er du opptatt?</h1>
+
+            <label for="from_hour">Starting from
+                <input type="range" name="from_hour" id="from_hour" min="1" max="24" value="10"></label>
+
+            <label for="to_hour">Finished at
+                <input type="range" name="to_hour" id="to_hour" min="1" max="24" value="15"></label>
+
+            <label for="which_day">Date
+                <input type="date" name="which_day" id="which_day"></label>
+
+            <br>
+
+            <div id="hours-container">
+                <div class="hour" id="H1">06</div>
+                <div class="hour" id="H2">07</div>
+                <div class="hour" id="H3">08</div>
+                <div class="hour" id="H4">09</div>
+                <div class="hour" id="H5">10</div>
+                <div class="hour" id="H6">11</div>
+                <div class="hour" id="H7">12</div>
+                <div class="hour" id="H8">13</div>
+                <div class="hour" id="H9">14</div>
+                <div class="hour" id="H10">15</div>
+                <div class="hour" id="H11">16</div>
+                <div class="hour" id="H12">17</div>
+                <div class="hour" id="H13">18</div>
+                <div class="hour" id="H14">19</div>
+                <div class="hour" id="H15">20</div>
+                <div class="hour" id="H16">21</div>
+                <div class="hour" id="H17">22</div>
+                <div class="hour" id="H18">23</div>
+                <div class="hour" id="H19">00</div>
+                <div class="hour" id="H20">01</div>
+                <div class="hour" id="H21">02</div>
+                <div class="hour" id="H22">03</div>
+                <div class="hour" id="H23">04</div>
+                <div class="hour" id="H24">05</div>
+            </div>
+
+            <br>
+
+            <input type="button" value="ADD TIME" id="add-btn">
+        </form>
+    </div>
+</div>
+
+
+<script>
+
+    const fromHour = document.getElementById('from_hour')
+    const toHour = document.getElementById('to_hour')
+
+    // run function when the page loads this far...
+    document.onload = (updateTimes)
+
+    // every time the slider is changed, run function.
+    fromHour.oninput = (updateTimes);
+    toHour.oninput = (updateTimes);
+
+    // The in-between values of slider 1 and 2 must be red on the bar, and the others green.
+            function updateTimes() {
+                const from = fromHour.value // "from" is the variable for the first slider
+                const to = toHour.value // "to" is the variable for the second slider
+
+                for (let i = 1; i <= 24; i++) {
+                    if (i >= from && i <= to) {
+                    /* When the number on the bar is greater or equal to the first slider value (from)
+                    and the number on the bar is less than or equal to the second slider */
+                        document.getElementById(`H${i}`).style.backgroundColor = 'red'
+                    } else {
+                        document.getElementById(`H${i}`).style.backgroundColor =
+                            'lightgreen'
+                    }
+                }
+
+
+    }
+</script>
+
+
+</body>
+</html>
