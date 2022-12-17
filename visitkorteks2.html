@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Visitkort gruppe 7B</title>
+  <style>
+    /* -- hovedkontainer for visittkort innhold -- */
+    a, a:hover, a:visited {
+    }
+    #hovedkontainer {
+      position: absolute;
+      top: 25%;
+      left: 0;
+      right: 0;
+      min-height: 550px;
+    }
+    .sentrering {
+      display: flex;
+      justify-content: center;
+    }
+    /* -- Visittkort knapp -- */
+    .visittkort:hover {
+      color: #0000FF;
+      transform: scale(1.2);
+      transition: transform .3s;
+      border: 4px solid #0000FF;
+    }
+    .visittkort {
+      color: rgba(100, 100, 197, 0.99);
+      padding: 10px;
+      font-size: 45px;
+      font-family: "Arial Rounded MT Bold";
+      border: 3px solid #0000FF;
+      margin: 0;
+      position: absolute;
+      right: 25%;
+      left: 25%;
+      text-align: center;
+      cursor: pointer;
+    }
+    /* -- Design av Visittkort -- */
+    .card img {
+      display: block;
+      float: right;
+      height: 100px;
+      width: 100px;
+    }
+    .card h1 {
+      font-size: 24px;
+      display: block;
+      float: left;
+      margin-top: 70px;
+    }
+    #rekke {
+      margin-top: 80px;
+    }
+    .card p {
+      display: block;
+      float: left;
+      font-size: 18px;
+      line-height: 26px;
+    }
+    .card {
+      float: left;
+      color: #b9771e;
+      padding: 28px;
+      height: 550px;
+      width: 300px;
+      margin-right: 0;
+      margin-top: 20px;
+      font-family: "Arial Rounded MT Bold";
+      font-size: 20px;
+      animation-name: skyvinn;
+      animation-duration: 2.5s;
+      animation-timing-function: ease;
+      border: 1px solid #0000FF;
+      word-wrap: normal;
+      overflow: hidden;
+      background: antiquewhite;
+    }
+    /* -- Visittkort animasjon --*/
+    @keyframes skyvned {
+      0% {margin-top: 100px;}
+      100% {margin-top: 0;}
+    }
+    @keyframes skyvinn {
+      0% {margin-left: 100px;}
+      100% {margin-left: 0;}
+    }
+  </style>
+</head>
+<body>
+<div id="hovedkontainer">
+  <div class="visittkort" id="visittkort"> <!-- Visittkort knappen -->
+    Visittkort for gruppe 7B
+  </div>
+
+  <div id="rekke"> <!-- Kontainer for å samle klasser -->
+    <div class="sentrering"> <!-- klassen sentrerer visittkortene -->
+      <div class="card"> <!-- klasse for visittkortene -->
+        <h1>Christian</h1>
+        <img src="IMAGES/Christian%20Portrett%20visittkort%20eks.1.jpg" alt="Bilde av Christian" title="Bilde av Christian" />
+        <p>... Er en gladgutt fra Vennesla som har gått studiespesialisering på videregående, før han gikk inn i
+        Forsvaret og jobbet der i 3 år som militær vakt. Christian liker å bruke fritiden sin på å trene, skrive lyriske tekster og game.
+          Har ingen tidligere erfaringer med programmering før han begynte med studiet, og storkoser seg med alt som han kan lære seg.</p>
+      </div>
+
+      <div class="card">
+        <h1>Felix</h1>
+        <img src="" alt="Bilde av Felix" title="Bilde av Felix" />
+             <p>... er</p>
+      </div>
+
+      <div class="card">
+        <h1>Nam</h1>
+        <img src="" alt="Bilde av Nam" title="Bilde av Nam" />
+        <p>... er </p>
+      </div>
+
+      <div class="card">
+      <h1>Thevi</h1>
+        <img  src="" alt="Bilde av Thevi" title="Bilde av Thevi" />
+        <p>... er </p>
+      </div>
+
+      <div class="card">
+        <h1>Mohammed</h1>
+        <img src="" alt="Bilde av Mohammed" title="Bilde av Mohammed" />
+        <p>... er</p>
+      </div>
+
+      <div class="card">
+        <h1>Adrian</h1>
+        <img src="" alt="Bilde av Adrian" title="Bilde av Adrian" />
+        <p>... er</p>
+      </div>
+
+      <div class="card">
+        <h1>Daniel</h1>
+        <img src="" alt="Bilde av Daniel" title="Bilde av Daniel" />
+        <p>... er</p>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
