@@ -1,15 +1,14 @@
-h1 {
+H1 {
     font-size: 20px;
     text-align: center;
     margin: 10px;
     padding: 10px;
 }
 
-h2 {
+H2 {
     position: relative;
     float: right;
     font-size: 18px;
-    margin: auto;
     margin-right: 30px;
 }
 
@@ -23,7 +22,7 @@ h2 {
 }
 
 .forms {
-    background-color: lightgoldenrodyellow;
+    background-color: antiquewhite;
     position: relative;
     display: inline-block;
     width: 100%;
@@ -70,3 +69,72 @@ form > label {
     line-height: 1.5em;
     display: inline;
 }
+
+body{
+    background-color: antiquewhite;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+}
+
+.nav li {
+    float: left;
+    border-right:1px solid #bbb;
+}
+
+
+.nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.nav li a:hover:not(.active) {
+    background-color: white;
+    color: black;
+}
+
+.nav .active {
+    background-color: Darkred;
+}
+
+.footer {
+    list-style-type: none;
+    position: fixed;
+    overflow: hidden;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    background-color: black;
+    text-align: center;
+}
+
+.footer li {
+    float: left;
+    border-right:1px solid #bbb;
+}
+
+.footer li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.footer li a:hover:not(.active) {
+    background-color: white;
+    color: black;
+}
+
