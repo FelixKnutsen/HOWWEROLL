@@ -1,0 +1,202 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HowWeRoll</title>
+    <style>
+        /*CSS*/
+        body{
+            background-color: antiquewhite;
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: black;
+        }
+
+        li {
+            float: left;
+            border-right:1px solid #bbb;
+        }
+
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover:not(.active) {
+            background-color: white;
+            color: black;
+        }
+
+        .active {
+            background-color: Darkred;
+        }
+
+        .footer {
+            list-style-type: none;
+            position: fixed;
+            overflow: hidden;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            color: white;
+            background-color: black;
+            text-align: center;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 400px;
+            margin-top: 10%;
+            rotate: -1deg;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+<section>
+    <ul>
+        <li><a class="active" href="#home">Home</a></li>
+        <li style="float: right"><a href="HWR_Result.html">HWR Result</a></li>
+        <li style="float: right"><a href="HowWeRoll.html">How we roll</a></li>
+        <li style="float: right"><a href="https://github.com/FelixKnutsen/HowWeRoll" target="_blank">Github</a></li>
+        <li style="float: right"><a href="https://www.figma.com/file/PBKyIuJsruxhxKZUqXUKFL/HOW-WE-ROLL-7b?node-id=0%3A1" target="_blank">Figma</a></li>
+        <li style="float: right"><a href="visittkortforslag.html">visittkort2</a></li>
+
+    </ul>
+</section>
+
+<div class="footer">
+    <li style="float: left"><a href="Insert Link">Created by group 7B of UIA</a></li>
+    <li style="float: right"><a href="Insert Link">Credits</a></li>
+</div>
+<h2>GRUPPE 7B</h2>
+
+<!-- Visuelle av data innfelt -->
+<section class="form">
+    <h2>Fyll inn informasjon</h2>
+    <form>
+        <p><label for="dataNavn">Navn</label>
+            <input type="text" name="navn" id="dataNavn" /></p>
+
+       <p><label>Alder:
+            <input type="number" name="dataAlder" id="dataAlder" max="100" min="18">
+       </label></p>
+
+        <p>HowWeRoll-parametre (1-100):</p>
+
+        <div class="slidecontainer">
+            <p>
+                <!-- dork - introvert or ekstrovert -->
+                <label for="dork">Dag</label>
+                <input type="range" id="dork" name="dork" value="50" class="slider">
+                <label for="dork">Kveld</label>
+            </p>
+
+            <p>
+                <!--  lorb - lytter or budbringer -->
+                <label for="lorb">Lytter</label>
+                <input type="range" id="lorb" name="lorb" value="50" class="slider">
+                <label for="lorb">Budbringer</label>
+            </p>
+
+            <p>
+                <!--  iorf - iniativtaker or følger -->
+                <label for="iorf">Initiativtaker</label>
+                <input type="range" id="iorf" name="iorf" value="50" class="slider">
+                <label for="iorf">Følger</label>
+            </p>
+        </div>
+                <!-- daty - dato, tid og årsstall | Skillet med "til" og "fra" [(begrenset med min-max parametre)snart]-->
+       <h2>Ledig dato og tid</h2>
+        <p>
+            <label> Fra dato og tid:
+                <input type="datetime-local" name="tdaty" id="tdaty">
+            </label>
+        </p>
+
+        <p>
+            <label> Til dato og tid:
+                <input type="datetime-local" name="fdaty" id="fdaty">
+            </label>
+        </p>
+
+        <button type="submit" id="btnLagre">Lagre</button>
+    </form>
+</section>
+
+<!-- Visuelle av data ID -->
+<div class="id">
+    Kopier id: <input type="text" value="timetrxid" id="timetrxidCOPY" style="width: 400px">
+</div>
+<div class="results">
+    <h2>Form Data</h2>
+    <pre></pre>
+</div>
+
+
+<!-- script -->
+
+<script>
+    <!-- Lagring-av-data -->
+    var timetrxidCOPY=document.getElementById("timetrxidCOPY");
+    var btnLagre=document.getElementById("btnLagre");
+    timetrxidCOPY.hidden=true;
+
+        btnLagre.onclick=function (){
+        timetrxidCOPY.hidden=false;
+    }
+
+    <!-- Kode oppgitt av Janis -->
+    // https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch (hentet 13/12/2022)
+    // Example POST method implementation using fetch:
+    async function postData(url = '', data = {}) {
+        // Default options are marked with *
+        const response = await fetch(url, {
+            method: 'POST', // *GET, POST, PUT, DELETE, etc.
+            mode: 'cors', // no-cors, *cors, same-origin
+            cache: 'no-cache', // *default, no-cache, reload, force-cache,only-if-cached
+            credentials: 'same-origin', // include, *same-origin, omit
+            headers: {
+                'Content-Type': 'application/json',
+                // 'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            redirect: 'follow', // manual, *follow, error
+            referrerPolicy: 'no-referrer', // no-referrer,*no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+            body: JSON.stringify(data) // body data type must match"Content-Type" header
+        });
+        return response.json(); // parses JSON response into native JavaScriptobjects
+    }
+    <!-- Henter nåværende verdi og gir deg som resultat en id med tid- og dataid -->
+    function handleSubmit(event) {
+        event.preventDefault();
+        const data = new FormData(event.target);
+        const formJSON = Object.fromEntries(data.entries());
+        const results = document.querySelector('.results pre');
+        postData('https://bacit.info/', formJSON)
+            .then(data => {
+                results.innerText = JSON.stringify(data, null, 2);
+                timetrxidCOPY.value=data.time+"-"+data.trxid;
+            });
+    }
+    const form = document.querySelector('form');
+    form.addEventListener('submit', handleSubmit);
+</script>
+</body>
+
+</html>
