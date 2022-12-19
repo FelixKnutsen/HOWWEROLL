@@ -5,6 +5,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Visitkort gruppe 7B</title>
   <style>
+
+    .active {
+      background-color: Darkred;
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: black;
+    }
+
+    li {
+      float: left;
+      border-right:1px solid #bbb;
+    }
+
+
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    li a:hover:not(.active) {
+      background-color: white;
+      color: black;
+    }
+
+    .footer {
+      list-style-type: none;
+      position: fixed;
+      overflow: hidden;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      color: white;
+      background-color: black;
+      text-align: center;
+    }
+
     /* -- hovedkontainer for visittkort innhold -- */
     a, a:hover, a:visited {
     }
@@ -65,7 +109,7 @@
       float: left;
       color: #b9771e;
       padding: 28px;
-      height: 550px;
+      height: 500px;
       width: 300px;
       margin-right: 0;
       margin-top: 20px;
@@ -91,6 +135,33 @@
   </style>
 </head>
 <body>
+
+<section>
+  <ul>
+    <li><a class="active" href="#home">Home</a></li>
+    <li style="float: right"><a href="HWR_Result.html">HWR Result</a></li>
+    <li style="float: right"><a href="Visitkort.html">How we roll</a></li>
+    <li style="float: right"><a href="https://github.com/FelixKnutsen/HowWeRoll" target="_blank">Github</a></li>
+    <li style="float: right"><a href="https://www.figma.com/file/PBKyIuJsruxhxKZUqXUKFL/HOW-WE-ROLL-7b?node-id=0%3A1" target="_blank">Figma</a></li>
+    <li style="float: right"><a href="visittkortforslag.html">visittkort2</a></li>
+    <li style="float: right"><a href="forslag_input.html">Forslag inputfelt</a></li>
+
+
+  </ul>
+</section>
+<div>
+  <h1></h1>
+</div>
+<div class="footer">
+  <li style="float: left"><a href="Insert Link">Created by group 7B of UIA</a></li>
+  <li style="float: right"><a href="Insert Link">Credits</a></li>
+</div>
+
+<script>
+  /* javascript her*/
+</script>
+
+
 <div id="hovedkontainer">
   <div class="visittkort" id="visittkort"> <!-- Visittkort knappen -->
     Visittkort for gruppe 7B
@@ -100,7 +171,7 @@
     <div class="sentrering"> <!-- klassen sentrerer visittkortene -->
       <div class="card"> <!-- klasse for visittkortene -->
         <h1>Christian</h1>
-        <img src="IMAGES/Christian%20Portrett%20visittkort%20eks.1.jpg" alt="Bilde av Christian" title="Bilde av Christian" />
+        <img src="IMAGES/Christian%20Portrett%20visittkort%20eks.1.jpg" height="auto"; alt="Bilde av Christian" title="Bilde av Christian" />
         <p>... Er en gladgutt fra Vennesla som har gått studiespesialisering på videregående, før han gikk inn i
         Forsvaret og jobbet der i 3 år som militær vakt. Christian liker å bruke fritiden sin på å trene, skrive lyriske tekster og game.
           Har ingen tidligere erfaringer med programmering før han begynte med studiet, og storkoser seg med alt som han kan lære seg.</p>
