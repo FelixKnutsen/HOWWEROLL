@@ -71,3 +71,29 @@ Fra nå av bør samarbeidet skje skriftlig i gruppens Discord kanal.
 
 :::::::::::::::
 
+*12. Desember 2022
+Oppmøtte: Thevi, Adrian, Nam, Christian og Mohammed
+Ikke oppmøtt: Felix (jobb), Daniel (Ingen kontakt)
+
+Agenda:
+ - Planlegge videre utførelse av prosjektet mot ferdigstillelse
+ - om mulig avholde daglige workshops frem til ferdigstilling
+
+How We Roll hvor der er visittkort nå, må byttes ut til egen fane med visittkort (bio til gruppemedlemmer) da How We Roll html
+skal være "input" og HWR results skal være "output"
+
+Lage en input hwr html, som genererer ID som kan samkjøres med HWR results
+
+Eventuelt finne ut om muligheten til å opprette en server slik at man kan lagre genererte resultater i prosjektet.
+
+Skaffe "input" felt på "output" (HWR results) side slik at "bruker" kan registreres med mottatt ID fra "input" (HWR) side.
+
+Utfylle visittkort til hver enkelt gruppemedlem
+
+Tenke funksjonalitet først. Deretter komme tilbake til design før ferdigstilling.
+
+Fordelte oppgaver:
+
+- Akademisk rapport: Adrian og Christian
+- Videre på koding: Thevi, Nam og Mohammed
+- Hjelpe til med å finne koder og løsninger: Alle
