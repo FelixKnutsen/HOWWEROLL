@@ -80,6 +80,7 @@
             width: 100%;
             background: Black;
             text-align: center;
+
         }
 
         .month ul li {
@@ -108,9 +109,10 @@
         }
 
         .Uke {
-            padding: 15px 25px;
+            padding: 2rem 3rem;
             width: 100%;
             background-color: #ddd;
+            font-weight: bold;
         }
 
         .Uke li {
@@ -121,47 +123,99 @@
         }
 
         .Dag {
-            padding: 30px 25px;
+            padding: 2rem 3rem;
             width: 100%;
             background: #eee;
             margin: 0;
         }
 
-        .Dag li {
-            list-style-type: none;
-            display: inline-block;
-            width: 13.6%;
-            text-align: center;
-            margin-bottom: 12px;
-            margin-top: 12px;
-            font-size:15px;
-            color: #777;
-        }
-
-        .Dag li .active {
-            padding: 10px 13.6%;
-            background: Lime;
-            color: white
-        }
-
-        .Dag li .active2 {
-            padding: 10px 13.6%;
-            background: Yellow;
-            color: white
-        }
-
-        .Dag li .active3 {
-            padding: 10px 13.6%;
-            background: Red;
-            color: white
-        }
-
-        .Dag li .NotMonth {
-            padding: 10px 13.6%;
-            color: darkgrey
-        }
         h1 {
             text-align: center;
+        }
+
+        .container {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .btn0 {
+            padding: 2.5rem 8rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            cursor: pointer;
+            outline: none;
+            width: 1.6%;
+            color: grey;
+        }
+
+        .btn {
+            padding: 2.5rem 8rem;
+            border: 1px solid #ccc;
+
+            cursor: pointer;
+            outline: none;
+            width: 1.6%;
+        }
+
+        .btn:active {
+            transform: scale(1.2);
+            background: antiquewhite;
+        }
+
+        .close-modal {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            padding: 2rem 18rem;
+            color: white;
+        }
+
+        .modal {
+            width: 450px;
+            position: fixed;
+            top: -50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: top 0.3s ease-in-out;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            z-index: 2;
+            background-color: white;
+        }
+
+        .modal.active {
+            top: 55%;
+        }
+
+        .modal .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ccc;
+            padding: 0.5rem 2.5rem;
+            background-color: black;
+            color: white;
+            font-weight: bold;
+        }
+
+        .modal .body {
+            padding: 0.75rem;
+            background: antiquewhite;
+            color: black;
+        }
+
+        #overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+
+        #overlay.active {
+            display: block;
         }
 
 
@@ -187,7 +241,7 @@
     <ul>
         <li class="prev">&#10094;</li>
         <li class="next">&#10095;</li>
-        <li>November<br>
+        <li>Desember<br>
             <span style="font-size:18px">2022</span>
         </li>
     </ul>
@@ -204,41 +258,789 @@
 </ul>
 
 <ul class="Dag">
-    <li><span class="NotMonth">31</span></li>
-    <li><span class="active3">1</span></li>
-    <li><span class="active3">2</span></li>
-    <li><span class="active2">3</span></li>
-    <li><span class="active">4</span></li>
-    <li><span class="active2">5</span></li>
-    <li><span class="active">6</span></li>
-    <li><span class="active">7</span></li>
-    <li><span class="active">8</span></li>
-    <li><span class="active3">9</span></li>
-    <li><span class="active">10</span></li>
-    <li><span class="active2">11</span></li>
-    <li><span class="active3">12</span></li>
-    <li><span class="active2">13</span></li>
-    <li><span class="active">14</span></li>
-    <li><span class="active3">15</span></li>
-    <li><span class="active">16</span></li>
-    <li><span class="active2">17</span></li>
-    <li><span class="active3">18</span></li>
-    <li><span class="active">19</span></li>
-    <li><span class="active">20</span></li>
-    <li><span class="active3">21</span></li>
-    <li><span class="active">22</span></li>
-    <li><span class="active3">23</span></li>
-    <li><span class="active">24</span></li>
-    <li><span class="active">25</span></li>
-    <li><span class="active2">26</span></li>
-    <li><span class="active2">27</span></li>
-    <li><span class="active2">28</span></li>
-    <li><span class="active">29</span></li>
-    <li><span class="active">30</span></li>
-    <li><span class="NotMonth">1</span></li>
-    <li><span class="NotMonth">2</span></li>
-    <li><span class="NotMonth">3</span></li>
-    <li><span class="NotMonth">4</span></li>
+    <div class="container">
+        <button class="btn0" data-target="#modal0">28</button>
+        <button class="btn0" data-target="#modal0">29</button>
+        <button class="btn0" data-target="#modal0">30</button>
+        <button class="btn" data-target="#modal1">1</button>
+        <button class="btn" data-target="#modal2">2</button>
+        <button class="btn" data-target="#modal3">3</button>
+        <button class="btn" data-target="#modal4">4</button>
+        <button class="btn" data-target="#modal5">5</button>
+        <button class="btn" data-target="#modal6">6</button>
+        <button class="btn" data-target="#modal7">7</button>
+        <button class="btn" data-target="#modal8">8</button>
+        <button class="btn" data-target="#modal9">9</button>
+        <button class="btn" data-target="#modal10">10</button>
+        <button class="btn" data-target="#modal11">11</button>
+        <button class="btn" data-target="#modal12">12</button>
+        <button class="btn" data-target="#modal13">13</button>
+        <button class="btn" data-target="#modal14">14</button>
+        <button class="btn" data-target="#modal15">15</button>
+        <button class="btn" data-target="#modal16">16</button>
+        <button class="btn" data-target="#modal17">17</button>
+        <button class="btn" data-target="#modal18">18</button>
+        <button class="btn" data-target="#modal19">19</button>
+        <button class="btn" data-target="#modal20">20</button>
+        <button class="btn" data-target="#modal21">21</button>
+        <button class="btn" data-target="#modal22">22</button>
+        <button class="btn" data-target="#modal23">23</button>
+        <button class="btn" data-target="#modal24">24</button>
+        <button class="btn" data-target="#modal25">25</button>
+        <button class="btn" data-target="#modal26">26</button>
+        <button class="btn" data-target="#modal27">27</button>
+        <button class="btn" data-target="#modal28">28</button>
+        <button class="btn" data-target="#modal29">29</button>
+        <button class="btn" data-target="#modal30">30</button>
+        <button class="btn" data-target="#modal31">31</button>
+        <button class="btn0" data-target="#modal0">1</button>
+    </div>
+
+    <div class="modal" id="modal1">
+        <div class="header">
+            <div class="title">Torsdag, 1. Desember 2022</div>
+            <button class="btn close-modal">&times;</button>
+        </div>
+        <div class="body">
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+
+        </div>
+    </div>
+
+    <div class="modal" id="modal2">
+        <div class="header">
+            <div class="title">Fredag, 2. Desember 2022</div>
+            <button class="btn close-modal">&times;</button>
+        </div>
+        <div class="body">
+            <p>Adrian    [11AM  - 4PM]</p>
+            <br>
+            <p>Christian [12AM  - 6PM]</p>
+            <br>
+            <p>Daniel    [8AM   - 10AM]</p>
+            <br>
+            <p>Felix     [12AM  - 4PM]</p>
+            <br>
+            <p>Mohammed  [2PM   -  10PM]</p>
+            <br>
+            <p>Nam       [1PM   -  5PM]</p>
+            <br>
+            <p>The Vi    [2PM   -  8PM]</p>
+            <br>
+
+        </div>
+    </div>
+
+    <div class="modal" id="modal3">
+        <div class="header">
+            <div class="title">Lørdag, 3. Desember 2022</div>
+            <button class="btn close-modal">&times;</button>
+        </div>
+        <div class="body">
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+
+        </div>
+    </div>
+
+    <div class="modal" id="modal4">
+        <div class="header">
+            <div class="title">Søndag, 4. Desember 2022</div>
+            <button class="btn close-modal">&times;</button>
+        </div>
+        <div class="body">
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+
+        </div>
+    </div>
+
+    <div class="modal" id="modal5">
+        <div class="header">
+            <div class="title">Mandag, 5. Desember 2022</div>
+            <button class="btn close-modal">&times;</button>
+        </div>
+        <div class="body">
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+
+        </div>
+    </div>
+
+    <div class="modal" id="modal6">
+        <div class="header">
+            <div class="title">Tirsdag, 6. Desember 2022</div>
+            <button class="btn close-modal">&times;</button>
+        </div>
+        <div class="body">
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+
+        </div>
+    </div>
+
+    <div class="modal" id="modal7">
+        <div class="header">
+            <div class="title">Onsdag, 7. Desember 2022</div>
+            <button class="btn close-modal">&times;</button>
+        </div>
+        <div class="body">
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+
+        </div>
+    </div>
+
+    <div class="modal" id="modal8">
+        <div class="header">
+            <div class="title">Torsdag, 8. Desember 2022</div>
+            <button class="btn close-modal">&times;</button>
+        </div>
+        <div class="body">
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+
+        </div>
+    </div>
+
+    <div class="modal" id="modal9">
+        <div class="header">
+            <div class="title">Fredag, 9. Desember 2022</div>
+            <button class="btn close-modal">&times;</button>
+        </div>
+        <div class="body">
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+
+        </div>
+    </div>
+
+    <div class="modal" id="modal10">
+        <div class="header">
+            <div class="title">Lørdag, 10. Desember 2022</div>
+            <button class="btn close-modal">&times;</button>
+        </div>
+        <div class="body">
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+
+        </div>
+    </div>
+
+    <div class="modal" id="modal11">
+        <div class="header">
+            <div class="title">Søndag, 11. Desember 2022</div>
+            <button class="btn close-modal">&times;</button>
+        </div>
+        <div class="body">
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+
+        </div>
+    </div>
+
+    <div class="modal" id="modal12">
+        <div class="header">
+            <div class="title">Mandag, 12. Desember 2022</div>
+            <button class="btn close-modal">&times;</button>
+        </div>
+        <div class="body">
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+
+        </div>
+    </div>
+
+    <div class="modal" id="modal13">
+        <div class="header">
+            <div class="title">Tirsdag, 13. Desember 2022</div>
+            <button class="btn close-modal">&times;</button>
+        </div>
+        <div class="body">
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+
+        </div>
+    </div>
+
+    <div class="modal" id="modal14">
+        <div class="header">
+            <div class="title">Onsdag, 14. Desember 2022</div>
+            <button class="btn close-modal">&times;</button>
+        </div>
+        <div class="body">
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+
+        </div>
+    </div>
+
+    <div class="modal" id="modal15">
+        <div class="header">
+            <div class="title">Torsdag, 15. Desember 2022</div>
+            <button class="btn close-modal">&times;</button>
+        </div>
+        <div class="body">
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+
+        </div>
+    </div>
+
+    <div class="modal" id="modal16">
+        <div class="header">
+            <div class="title">Fredag, 16. Desember 2022</div>
+            <button class="btn close-modal">&times;</button>
+        </div>
+        <div class="body">
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+
+        </div>
+    </div>
+
+    <div class="modal" id="modal17">
+        <div class="header">
+            <div class="title">Lørdag, 17. Desember 2022</div>
+            <button class="btn close-modal">&times;</button>
+        </div>
+        <div class="body">
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+
+        </div>
+    </div>
+
+    <div class="modal" id="modal18">
+        <div class="header">
+            <div class="title">Søndag, 18. Desember 2022</div>
+            <button class="btn close-modal">&times;</button>
+        </div>
+        <div class="body">
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+
+        </div>
+    </div>
+
+    <div class="modal" id="modal19">
+        <div class="header">
+            <div class="title">Mandag, 19. Desember 2022</div>
+            <button class="btn close-modal">&times;</button>
+        </div>
+        <div class="body">
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+
+        </div>
+    </div>
+
+    <div class="modal" id="modal20">
+        <div class="header">
+            <div class="title">Tirsdag, 20. Desember 2022</div>
+            <button class="btn close-modal">&times;</button>
+        </div>
+        <div class="body">
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+
+        </div>
+    </div>
+
+    <div class="modal" id="modal21">
+        <div class="header">
+            <div class="title">Onsdag, 21. Desember 2022</div>
+            <button class="btn close-modal">&times;</button>
+        </div>
+        <div class="body">
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+
+        </div>
+    </div>
+
+    <div class="modal" id="modal22">
+        <div class="header">
+            <div class="title">Torsdag, 22. Desember 2022</div>
+            <button class="btn close-modal">&times;</button>
+        </div>
+        <div class="body">
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+
+        </div>
+    </div>
+
+    <div class="modal" id="modal23">
+        <div class="header">
+            <div class="title">Fredag, 23. Desember 2022</div>
+            <button class="btn close-modal">&times;</button>
+        </div>
+        <div class="body">
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+
+        </div>
+    </div>
+
+    <div class="modal" id="modal24">
+        <div class="header">
+            <div class="title">Lørdag, 24. Desember 2022</div>
+            <button class="btn close-modal">&times;</button>
+        </div>
+        <div class="body">
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+
+        </div>
+    </div>
+
+    <div class="modal" id="modal25">
+        <div class="header">
+            <div class="title">Søndag, 25. Desember 2022</div>
+            <button class="btn close-modal">&times;</button>
+        </div>
+        <div class="body">
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+
+        </div>
+    </div>
+
+    <div class="modal" id="modal26">
+        <div class="header">
+            <div class="title">Mandag, 26. Desember 2022</div>
+            <button class="btn close-modal">&times;</button>
+        </div>
+        <div class="body">
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+
+        </div>
+    </div>
+
+    <div class="modal" id="modal27">
+        <div class="header">
+            <div class="title">Tirsdag, 27. Desember 2022</div>
+            <button class="btn close-modal">&times;</button>
+        </div>
+        <div class="body">
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+
+        </div>
+    </div>
+
+    <div class="modal" id="modal28">
+        <div class="header">
+            <div class="title">Onsdag, 28. Desember 2022</div>
+            <button class="btn close-modal">&times;</button>
+        </div>
+        <div class="body">
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+
+        </div>
+    </div>
+
+    <div class="modal" id="modal29">
+        <div class="header">
+            <div class="title">Mandag, 29. Desember 2022</div>
+            <button class="btn close-modal">&times;</button>
+        </div>
+        <div class="body">
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+
+        </div>
+    </div>
+
+    <div class="modal" id="modal30">
+        <div class="header">
+            <div class="title">Tirsdag, 30. Desember 2022</div>
+            <button class="btn close-modal">&times;</button>
+        </div>
+        <div class="body">
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+
+        </div>
+    </div>
+
+    <div class="modal" id="modal31">
+        <div class="header">
+            <div class="title">Onsdag, 31. Desember 2022</div>
+            <button class="btn close-modal">&times;</button>
+        </div>
+        <div class="body">
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+            <p>Input 1...</p>
+            <br>
+
+        </div>
+    </div>
+
+    <div id="overlay"></div>
 </ul>
 
 <ul class="footer">
@@ -247,7 +1049,32 @@
 </ul>
 
 <script>
-    /* javascript her*/
+    const btns = document.querySelectorAll("[data-target]");
+    const close_modals = document.querySelectorAll(".close-modal");
+    const overlay = document.getElementById("overlay");
+
+    btns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+            document.querySelector(btn.dataset.target).classList.add("active");
+            overlay.classList.add("active");
+        });
+    });
+
+    close_modals.forEach((btn) => {
+        btn.addEventListener("click", () => {
+            const modal = btn.closest(".modal");
+            modal.classList.remove("active");
+            overlay.classList.remove("active");
+        });
+    });
+
+    window.onclick = (event) => {
+        if (event.target == overlay) {
+            const modals = document.querySelectorAll(".modal");
+            modals.forEach((modal) => modal.classList.remove("active"));
+            overlay.classList.remove("active");
+        }
+    };
 </script>
 
 
