@@ -21,14 +21,14 @@
         </style>
     </head>
     <body>
-    <ul class="nav">
-        <li><a class="active" href="index.html">Home</a></li>
-        <li style="float: right"><a href="outputhwr.html">HWR Result</a></li>
-        <li style="float: right"><a href="InputHWR.html">How We Roll</a></li>
-        <li style="float: right"><a href="Visitkorteks2.html">Bio gruppe 7B</a></li>
-        <li style="float: right"><a href="https://github.com/FelixKnutsen/HowWeRoll" target="_blank">Github</a></li>
-        <li style="float: right"><a href="https://www.figma.com/file/PBKyIuJsruxhxKZUqXUKFL/HOW-WE-ROLL-7b?node-id=0%3A1" target="_blank">Figma</a></li>
-    </ul>
+        <ul class="nav">
+            <li><a class="active" href="index.html">Home</a></li>
+            <li style="float: right"><a href="HWR_Result.html">HWR Result</a></li>
+            <li style="float: right"><a href="InputHWR.html">How We Roll</a></li>
+            <li style="float: right"><a href="Visitkorteks2.html">Bio gruppe 7B</a></li>
+            <li style="float: right"><a href="https://github.com/FelixKnutsen/HowWeRoll" target="_blank">Github</a></li>
+            <li style="float: right"><a href="https://www.figma.com/file/PBKyIuJsruxhxKZUqXUKFL/HOW-WE-ROLL-7b?node-id=0%3A1" target="_blank">Figma</a></li>
+        </ul>
 
         <div class="hwrbox" style="text-align: center;">
 
@@ -242,8 +242,8 @@
             'https://bacit.info/hwr/20221220215525-257679abb3830f3be723d9de8ff52188.json', //Christian
             'https://bacit.info/hwr/20221220215416-658444f7d2cb57909e93a8c9472d542c.json', //Thevi
             'https://bacit.info/hwr/20221220220419-d8ac08788258a4207664e7c7004cbe08.json', //Mohammed
-            'https://bacit.info/hwr/20221109142122-b3b96fa2ae88c968a19f256da7a6e38a.json', //Majd
-            'https://bacit.info/hwr/20221109140329-1b520c83a9ca3d0ba8af3bb05278ea43.json', //Sander
+            'https://bacit.info/hwr/20221220223730-43887421d82253d231c8df19157f7622.json', //Nam
+            'https://bacit.info/hwr/20221220224017-7aab3ed039a958f3373b7914d032ffdb.json', //Adrian
             ]
 
             //Henter trxid og time fra localstorage, og lager en url som legges sammen med de andre urlene
@@ -259,8 +259,8 @@
                 let Christian = data[1];
                 let Thevi = data[2];
                 let Mohammed = data[3];
-                let Majd = data[4];
-                let Sander = data[5];
+                let Nam = data[4];
+                let Adrian = data[5];
           
 
                 //Setter URL-en fra localstorage til en ny "profil", hvis det eksisterer
@@ -275,8 +275,8 @@
             DrawCir(Christian.MNf, Christian.fornavn, "red", "svg-MNf");
             DrawCir(Thevi.MNf, Thevi.fornavn, "purple", "svg-MNf")
             DrawCir(Mohammed.MNf, Mohammed.fornavn, "green", "svg-MNf")
-            DrawCir(Majd.MNf, Majd.fornavn, "orange", "svg-MNf")
-            DrawCir(Sander.MNf, Sander.fornavn, "blue", "svg-MNf")
+            DrawCir(Nam.MNf, Nam.fornavn, "orange", "svg-MNf")
+            DrawCir(Adrian.MNf, Adrian.fornavn, "blue", "svg-MNf")
 
             DrawCir(Lokal.MNf, Lokal.fornavn, "pink", "svg-MNf")
 
@@ -285,8 +285,8 @@
             DrawCir(Christian.SoA, Christian.fornavn, "red", "svg-SoA");
             DrawCir(Thevi.SoA, Thevi.fornavn, "purple", "svg-SoA")
             DrawCir(Mohammed.SoA, Mohammed.fornavn, "green", "svg-SoA")
-            DrawCir(Majd.SoA, Majd.fornavn, "orange", "svg-SoA")
-            DrawCir(Sander.SoA, Sander.fornavn, "blue", "svg-SoA")
+            DrawCir(Nam.SoA, Nam.fornavn, "orange", "svg-SoA")
+            DrawCir(Adrian.SoA, Adrian.fornavn, "blue", "svg-SoA")
 
             DrawCir(Lokal.SoA, Lokal.fornavn, "pink", "svg-SoA")
 
@@ -295,8 +295,8 @@
             DrawCir(Christian.BoP, Christian.fornavn, "red", "svg-BoP");
             DrawCir(Thevi.BoP, Thevi.fornavn, "purple", "svg-BoP")
             DrawCir(Mohammed.BoP, Mohammed.fornavn, "green", "svg-BoP")
-            DrawCir(Majd.BoP, Majd.fornavn, "orange", "svg-BoP")
-            DrawCir(Sander.BoP, Sander.fornavn, "blue", "svg-BoP")
+            DrawCir(Nam.BoP, Nam.fornavn, "orange", "svg-BoP")
+            DrawCir(Adrian.BoP, Adrian.fornavn, "blue", "svg-BoP")
 
             DrawCir(Lokal.BoP, Lokal.fornavn, "pink", "svg-BoP")
 
@@ -305,8 +305,8 @@
             DrawCir(Christian.SoV, Christian.fornavn, "red", "svg-SoV");
             DrawCir(Thevi.SoV, Thevi.fornavn, "purple", "svg-SoV")
             DrawCir(Mohammed.SoV, Mohammed.fornavn, "green", "svg-SoV")
-            DrawCir(Majd.SoV, Majd.fornavn, "orange", "svg-SoV")
-            DrawCir(Sander.SoV, Sander.fornavn, "blue", "svg-SoV")
+            DrawCir(Nam.SoV, Nam.fornavn, "orange", "svg-SoV")
+            DrawCir(Adrian.SoV, Adrian.fornavn, "blue", "svg-SoV")
 
             DrawCir(Lokal.SoV, Lokal.fornavn, "pink", "svg-SoV")
             
@@ -315,8 +315,8 @@
             DrawCir(Christian.SoT, Christian.fornavn, "red", "svg-SoT");
             DrawCir(Thevi.SoT, Thevi.fornavn, "purple", "svg-SoT")
             DrawCir(Mohammed.SoT, Mohammed.fornavn, "green", "svg-SoT")
-            DrawCir(Majd.SoT, Majd.fornavn, "orange", "svg-SoT")
-            DrawCir(Sander.SoT, Sander.fornavn, "blue", "svg-SoT")
+            DrawCir(Nam.SoT, Nam.fornavn, "orange", "svg-SoT")
+            DrawCir(Adrian.SoT, Adrian.fornavn, "blue", "svg-SoT")
 
             DrawCir(Lokal.SoT, Lokal.fornavn, "pink", "svg-SoT")
 
@@ -325,8 +325,8 @@
             DrawCir(Christian.IoP, Christian.fornavn, "red", "svg-IoP");
             DrawCir(Thevi.IoP, Thevi.fornavn, "purple", "svg-IoP")
             DrawCir(Mohammed.IoP, Mohammed.fornavn, "green", "svg-IoP")
-            DrawCir(Majd.IoP, Majd.fornavn, "orange", "svg-IoP")
-            DrawCir(Sander.IoP, Sander.fornavn, "blue", "svg-IoP")
+            DrawCir(Nam.IoP, Nam.fornavn, "orange", "svg-IoP")
+            DrawCir(Adrian.IoP, Adrian.fornavn, "blue", "svg-IoP")
 
             DrawCir(Lokal.IoP, Lokal.fornavn, "pink", "svg-IoP") 
 
@@ -335,8 +335,8 @@
             DrawCir(Christian.ToR, Christian.fornavn, "red", "svg-ToR");
             DrawCir(Thevi.ToR, Thevi.fornavn, "purple", "svg-ToR")
             DrawCir(Mohammed.ToR, Mohammed.fornavn, "green", "svg-ToR")
-            DrawCir(Majd.ToR, Majd.fornavn, "orange", "svg-ToR")
-            DrawCir(Sander.ToR, Sander.fornavn, "blue", "svg-ToR")
+            DrawCir(Nam.ToR, Nam.fornavn, "orange", "svg-ToR")
+            DrawCir(Adrian.ToR, Adrian.fornavn, "blue", "svg-ToR")
 
             DrawCir(Lokal.IoP, Lokal.fornavn, "pink", "svg-ToR")
 
