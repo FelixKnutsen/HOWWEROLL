@@ -56,14 +56,14 @@
     <div class="input-group">
       <div class="slidecontainer">
         <label for="range">Er du flink til å sammarbeide i gruppen</label>
-        <h5>Dårlig</h5><input type="range" id="skills" name="skills" min="0" max="100" value="50" class="slider" ><h5 style="margin-top: -9%; margin-left: 90%;">Flink</h5><p> <span id="demo" style="opacity: 0%;";></span></p>
+        <h5>Dårlig</h5><input type="range" id="MNf" name="MNf" min="0" max="100" value="50" class="slider" ><h5 style="margin-top: -9%; margin-left: 90%;">Flink</h5><p> <span id="demo" style="opacity: 0%;";></span></p>
       </div>
     </div>
 
     <div class="input-group">
       <div class="slidecontainer">
         <label for="range">Vil du helst jobbe alene eller i gruppe?</label>
-        <h5>Alene</h5><input type="range" id="gruppe" name="gruppe" min="0" max="100" value="50" class="slider" ><h5 style="margin-top: -9%; margin-left: 85%;">Gruppe</h5>
+        <h5>Alene</h5><input type="range" id="SoA" name="SoA" min="0" max="100" value="50" class="slider" ><h5 style="margin-top: -9%; margin-left: 85%;">Gruppe</h5>
       </div>
     </div>
     <br>
@@ -71,7 +71,7 @@
     <div class="input-group">
       <div class="slidecontainer">
         <label for="range">Er du en Natteravner</label>
-        <h5>Dagfugl</h5><input type="range" id="natteravner" name="natteravner" min="0" max="100" value="50" class="slider" ><h5 style="margin-top: -9%; margin-left: 85%;">Natteravner</h5>
+        <h5>Dagfugl</h5><input type="range" id="BoP" name="BoP" min="0" max="100" value="50" class="slider" ><h5 style="margin-top: -9%; margin-left: 85%;">Natteravner</h5>
       </div>
     </div>
     <br>
@@ -79,7 +79,7 @@
     <div class="input-group">
       <div class="slidecontainer">
         <label for="range">Er du introvert eller ekstrovert</label>
-        <h5>Introvert</h5><input type="range" id="vert" name="vert" min="0" max="100" value="50" class="slider" ><h5 style="margin-top: -9%; margin-left: 85%;">Ekstrovert</h5>
+        <h5>Introvert</h5><input type="range" id="SoV" name="SoV" min="0" max="100" value="50" class="slider" ><h5 style="margin-top: -9%; margin-left: 85%;">Ekstrovert</h5>
       </div>
     </div>
     <br>
@@ -87,7 +87,7 @@
     <div class="input-group">
       <div class="slidecontainer">
         <label for="range">Foretrekker du front- eller back-end?</label>
-        <h5>Front-end</h5><input type="range" id="end" name="end" min="0" max="100" value="50" class="slider" ><h5 style="margin-top: -9%; margin-left: 85%;">Back-end</h5>
+        <h5>Front-end</h5><input type="range" id="SoT" name="SoT" min="0" max="100" value="50" class="slider" ><h5 style="margin-top: -9%; margin-left: 85%;">Back-end</h5>
       </div>
     </div>
     <br>
@@ -95,7 +95,7 @@
     <div class="input-group">
       <div class="slidecontainer">
         <label for="range">Vil du ha en fast eller fleksibel hverdag?</label>
-        <h5>Fast</h5><input type="range" id="hverdag" name="hverdag" min="0" max="100" value="50" class="slider" ><h5 style="margin-top: -9%; margin-left: 85%;">Fleksibel</h5>
+        <h5>Fast</h5><input type="range" id="IoP" name="IoP" min="0" max="100" value="50" class="slider" ><h5 style="margin-top: -9%; margin-left: 85%;">Fleksibel</h5>
       </div>
     </div>
     <br>
@@ -103,7 +103,7 @@
     <div class="input-group">
       <div class="slidecontainer">
         <label for="range">Sier du at et produkt er dårlig hvis det er dårlig?</label>
-        <h5>Sier hvite løgner</h5><input type="range" id="erlighet" name="hverdag" min="0" max="100" value="50" class="slider" ><h5 style="margin-top: -9%; margin-left: 83%;">Sier direkte</h5>
+        <h5>Sier hvite løgner</h5><input type="range" id="ToR" name="ToR" min="0" max="100" value="50" class="slider" ><h5 style="margin-top: -9%; margin-left: 83%;">Sier direkte</h5>
       </div>
     </div>
     <br>
@@ -117,17 +117,14 @@
   <h2>Form Data</h2>
   <pre></pre>
 </div>
-<ul class="footer">
-  <li style= "float: left"><a href="https://github.com/FelixKnutsen/HowWeRoll">Created by group 7B of UIA</a></li>
-  <li style= "float: right"><a href="https://github.com/FelixKnutsen/HowWeRoll">Credits</a></li>
-</ul>
+
 
 
 <script>
 
 
 
-  var slider = document.getElementById("skills");
+  var slider = document.getElementById("MNf");
   var output = document.getElementById("demo");
 
   output.innerHTML = slider.value;
@@ -167,11 +164,12 @@
               localStorage.setItem('local_time', data.time);
             });
   }
+
   //Funksjonalitet til submit-knappen
   const form = document.querySelector('form');
   form.addEventListener('submit', PostForm);
+
 </script>
 
-</html>
     
 
