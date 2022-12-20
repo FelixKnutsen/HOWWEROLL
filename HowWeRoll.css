@@ -6,7 +6,7 @@ body {
     background-color: antiquewhite;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow: auto;
 }
 
 .h4 {
@@ -44,7 +44,7 @@ ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow: auto;
     background-color: black;
 }
 
@@ -70,7 +70,7 @@ li a:hover:not(.active) {
 .footer {
     list-style-type: none;
     position: fixed;
-    overflow: hidden;
+    overflow: auto;
     left: 0;
     bottom: 0;
     width: 100%;
