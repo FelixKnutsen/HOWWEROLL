@@ -13,19 +13,83 @@
     box-sizing: border-box;
 }
 
-/* Heydon Pickering’s lobotomized owl. Details: https://bit.ly/1H7MXUD */
-* + * {
-    margin-top: 1rem;
-}
 
 /* Set up fonts, colors and all that jazz. */
 body {
+    margin: 0;
+    padding: 0;
     background: antiquewhite;
     color: var(--color-gray-medium);
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
     Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-size: 18px;
     line-height: 1.45;
+}
+body{
+    background-color: antiquewhite;
+
+    overflow: auto;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+}
+
+.nav li {
+    float: left;
+    border-right:1px solid #bbb;
+}
+
+
+.nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.nav li a:hover:not(.active) {
+    background-color: white;
+    color: black;
+}
+
+.nav .active {
+    background-color: Darkred;
+}
+
+.footer {
+    list-style-type: none;
+    position: fixed;
+    overflow: hidden;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    background-color: black;
+    text-align: center;
+}
+
+.footer li {
+    float: left;
+    border-right:1px solid #bbb;
+}
+
+.footer li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.footer li a:hover:not(.active) {
+    background-color: white;
+    color: black;
 }
 
 /* Headings use a different font because they’re hipsters. */
