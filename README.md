@@ -73,7 +73,7 @@ Fra nå av bør samarbeidet skje skriftlig i gruppens Discord kanal.
 
 *12. Desember 2022
 Oppmøtte: Thevi, Adrian, Nam, Christian og Mohammed
-Ikke oppmøtt: Felix (jobb), Daniel (Ingen kontakt)
+Ikke oppmøtt: Daniel og Felix (jobb).
 
 Agenda:
  - Planlegge videre utførelse av prosjektet mot ferdigstillelse
