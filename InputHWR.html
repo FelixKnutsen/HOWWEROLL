@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link rel="stylesheet" type="text/css" href="style.css">
+<section class="contact-form">
+  <h1>Input for HowWeRoll</h1>
+  <p>Venligst fyll ut skjemaet under for å delta i HowWeRoll.</p>
+
+  <form id="inputform" method="post" action="">
+    <div class="input-group">
+      <input id="gender-mann" name="gender" type="radio" value="Mann"/>
+      <label class="inline" for="gender-mann">Mann</label>
+      <input id="gender-dame" name="Gender" type="radio" value="Dame"/>
+      <label class="inline" for="gender-dame">Dame</label>
+    </div>
+
+    <div class="input-group">
+      <label for="name">Navn</label>
+      <input id="name" name="name" type="text" placeholder="Skriv navnet ditt her"/>
+    </div>
+
+    <div class="input-group">
+      <label for="age">Hvor Gammel Er Du?</label>
+      <input id="age" name="age" type="Number" placeholder="Skriv alderen din her"/>
+    </div>
+
+
+    <div class="input-group">
+      <label for="subject">Hva foretrekker du?</label>
+      <select id="subject" name="subject">
+        <option>Velg</option>
+        <option>Pizza</option>
+        <option>Taco</option>
+        <option>Burger</option>
+        <option>Kebab</option>
+        <option>Ingen (jeg tåler ikke digg mat)</option>
+      </select>
+    </div>
+
+
+
+
+    <div class="input-group">
+      <div class="slidecontainer">
+        <label for="range">Er du flink til å sammarbeide i gruppen</label>
+        <h5>Dårlig</h5><input type="range" id="skills" name="Skills" min="0" max="100" value="50" class="slider" ><h5 style="margin-top: -9%; margin-left: 90%;">Flink</h5>
+      </div>
+    </div>
+    <br>
+
+    <div class="input-group">
+      <div class="slidecontainer">
+        <label for="range">Vil du helst jobbe alene eller i gruppe?</label>
+        <h5>Alene</h5><input type="range" id="Natteravner" name="Natteravner" min="0" max="100" value="50" class="slider" ><h5 style="margin-top: -9%; margin-left: 85%;">Gruppe</h5>
+      </div>
+    </div>
+    <br>
+
+    <div class="input-group">
+      <div class="slidecontainer">
+        <label for="range">Er du en Natteravner</label>
+        <h5>Dagfugl</h5><input type="range" id="Natteravner" name="Natteravner" min="0" max="100" value="50" class="slider" ><h5 style="margin-top: -9%; margin-left: 85%;">Natteravner</h5>
+      </div>
+    </div>
+    <br>
+
+    <div class="input-group">
+      <div class="slidecontainer">
+        <label for="range">Er du introvert eller ekstrovert</label>
+        <h5>Introvert</h5><input type="range" id="vert" name="vert" min="0" max="100" value="50" class="slider" ><h5 style="margin-top: -9%; margin-left: 85%;">Ekstrovert</h5>
+      </div>
+    </div>
+    <br>
+
+    <div class="input-group">
+      <div class="slidecontainer">
+        <label for="range">Foretrekker du front- eller back-end?</label>
+        <h5>Front-end</h5><input type="range" id="end" name="end" min="0" max="100" value="50" class="slider" ><h5 style="margin-top: -9%; margin-left: 85%;">Back-end</h5>
+      </div>
+    </div>
+    <br>
+
+    <div class="input-group">
+      <div class="slidecontainer">
+        <label for="range">Vil du ha en fast eller fleksibel hverdag?</label>
+        <h5>Fast</h5><input type="range" id="hverdag" name="hverdag" min="0" max="100" value="50" class="slider" ><h5 style="margin-top: -9%; margin-left: 85%;">Fleksibel</h5>
+      </div>
+    </div>
+    <br>
+
+    <div class="input-group">
+      <div class="slidecontainer">
+        <label for="range">Sier du at et produkt er dårlig hvis det er dårlig?</label>
+        <h5>Sier hvite løgner</h5><input type="range" id="hverdag" name="hverdag" min="0" max="100" value="50" class="slider" ><h5 style="margin-top: -9%; margin-left: 83%;">Sier direkte</h5>
+      </div>
+    </div>
+    <br>
+
+    <input name="secret" type="hidden" value="1b3a9374-1a8e-434e-90ab-21aa7b9b80e7"/>
+    <button type="submit">Lagre</button>
+  </form>
+</section>
+
+
+
+
+<script>
+
+  var slider = document.getElementById("skills");
+  var slider = document.getElementById("Natteravner");
+  output.innerHTML = slider.value;
+
+  slider.oninput = function() {
+    output.innerHTML = this.value;
+  }
+
+  // Hentet 03.11.22 fra https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+  // Example POST method implementation:
+  async function postData(url = '', data = {}) {
+    // Default options are marked with *
+    const response = await fetch(url, {
+      method: 'POST', // *GET, POST, PUT, DELETE, etc.
+      mode: 'cors', // no-cors, *cors, same-origin
+      cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+      credentials: 'same-origin', // include, *same-origin, omit
+      headers: {
+        'Content-Type': 'application/json'
+        // 'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      redirect: 'follow', // manual, *follow, error
+      referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+      body: JSON.stringify(data) // body data type must match "Content-Type" header
+    });
+    return response.json(); // parses JSON response into native JavaScript objects
+  }
+
+  //Oppretter en funksjon for når submit-knappen trykkes på
+  function PostForm(event) {
+    event.preventDefault();
+    alert("Takk for at du registrerte deg!"); //Varsel for at du har registrert deg
+    const data = new FormData(event.target);
+    const JSONdata = Object.fromEntries(data.entries());
+    const results = document.querySelector('.results pre');
+    postData('https://bacit.info', JSONdata)
+            .then((data) => {
+              console.log(data); // JSON data parsed by `data.json()` call
+              results.innerText = JSON.stringify(data, null, 2);
+
+              localStorage.setItem('local_trxid', data.trxid); //Lagrer data i localstorage
+              localStorage.setItem('local_time', data.time);
+            });
+  }
+
+  //Funksjonalitet til submit-knappen
+  const form = document.querySelector('.contact-form');
+  form.addEventListener('submit', PostForm);
+
+
+</script>
+</body>
+
+</html>
