@@ -13,23 +13,13 @@
     box-sizing: border-box;
 }
 
-
-/* Set up fonts, colors and all that jazz. */
 body {
     margin: 0;
     padding: 0;
     background: antiquewhite;
     color: var(--color-gray-medium);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
-    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-size: 18px;
-    line-height: 1.45;![](../../OneDrive/Pictures/NiggaSouls3.png)
 }
-body{
-    background-color: antiquewhite;
 
-    overflow: auto;
-}
 
 ul {
     list-style-type: none;
@@ -93,7 +83,6 @@ ul {
 }
 
 /* Headings use a different font because they’re hipsters. */
-h1,
 h2 {
     color: var(--color-darkest);
     font-size: 110%;
@@ -120,7 +109,7 @@ p {
 .results pre {
     margin-top: 1rem;
     padding: 0.5rem 1rem;
-    background: $color-lightest;
+    background:$color-lightest;
     border: 1px solid var(--color-gray-light);
     overflow-x: scroll;
 }
@@ -138,6 +127,9 @@ p {
 .input-group {
     margin-top: 0.25rem;
     padding: 0.5rem 1rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 18px;
 }
 
 .contact-form label {
