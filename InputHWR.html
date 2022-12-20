@@ -151,7 +151,7 @@
   //Oppretter en funksjon for når submit-knappen trykkes på
   function PostForm(event) {
     event.preventDefault();
-    alert("Takk for at du registrerte deg!"); //Varsel for at du har registrert deg
+    alert("Takk for at du registrerte deg!<br>Du kan nå se dine resultater i outputsiden :) nb. Dine resultater vil være rosa"); //Varsel for at du har registrert deg
     const data = new FormData(event.target);
     const JSONdata = Object.fromEntries(data.entries());
     const results = document.querySelector('.results pre');

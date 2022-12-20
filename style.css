@@ -254,5 +254,18 @@ h3{
     text-align: center;
     font-weight: 700;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color:teal;
+    color:Black;
+}
+
+.svg-overskrift {
+    text-align: center;
+}
+
+.svgtxt {
+    text-anchor: middle;
+}
+
+.cirtxt {
+    text-anchor: middle;
+    font-size: 12px;
 }
