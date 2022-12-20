@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="nb-NO">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .svg-overskrift {
+      text-align: center;
+    }
+
+    .svgtxt {
+      text-anchor: middle;
+    }
+
+    .cirtxt {
+      text-anchor: middle;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+<div style="text-align: center;">
+  <!--SVG-element for å vise data fra JSON-->
+  <h3 class="svg-overskrift">Er du en morgenfugl eller en natteravn?</h3>
+  <svg xmlns="http://www.w3.org/2000/svg" height="20%" width="60%" id="svg-Natteravn" style='border: 1px solid black;'>
+    <rect width="100%" height="50px" fill="gray"></rect>
+    <g class="svgtxt">
+      <text x="10%" y="25">Morgenfugl</text>
+      <text x="10%" y="40">0</text>
+
+      <text x="50%" y="40">50</text>
+
+      <text x="90%" y="25">Natteravn</text>
+      <text x="90%" y="40">100</text>
+    </g>
+
+    <!--Horizontal linje-->
+    <line x1="10%" y1="65%" x2="90%" y2="65%" style="stroke: black; stroke-width: 4"></line>
+
+    <!--Vertikale linjer-->
+    <line x1="10%" y1="60%" x2="10%" y2="70%" style="stroke: black; stroke-width: 2"></line>
+    <line x1="90%" y1="60%" x2="90%" y2="70%" style="stroke: black; stroke-width: 2"></line>
+
+    <line x1="50%" y1="62%" x2="50%" y2="68%" style="stroke: black; stroke-width: 2"></line>
+
+  </svg>
+</div>
+
+  </div>
+</div>
+    <script>
+
+      //Funksjon for å tegne inn data på SVG
+      function DrawCir (value, name, color, svgID) {
+        const svg = document.getElementById(svgID);
+        const svgns =  "http://www.w3.org/2000/svg";
+
+        //setter x- og y-verdiene
+        let Xvalue = (parseInt(value)*10) + 100; //Justeres basert på størrelsen på SVG-elementet
+        let Yvalue = 125;
+
+        //lager sirkel
+        let circle = document.createElementNS (svgns, "circle");
+        circle.setAttributeNS (null, 'cx', Xvalue); //x-verdi
+        circle.setAttributeNS (null, 'cy', Yvalue); //y-verdi
+        circle.setAttributeNS (null, 'r', 22.5); //radius
+        circle.setAttributeNS (null, 'style', 'fill: ' + color);
+        svg.appendChild(circle); //legger til i svg-elementet
+
+        //setter navn inni sirklen
+        let cirName = document.createElementNS (svgns, 'text');
+        cirName.setAttributeNS (null, 'x', Xvalue) //x-verdi
+        cirName.setAttributeNS (null, 'y', Yvalue - 4) //y-verdi som justeres for å få avstand mellom navn og verdi
+        cirName.setAttributeNS (null, 'class', 'cirtxt')
+        cirName.textContent = name;
+        svg.appendChild(cirName); //legger til i svg-elementet
+
+        //setter verdien inni sirkelen
+        let cirValue = document.createElementNS (svgns, 'text');
+        cirValue.setAttributeNS (null, 'x', Xvalue) //x-verdi-
+        cirValue.setAttributeNS (null, 'y', Yvalue + 12); //y-verdi som justeres for å få avstand mellom navn og verdi
+        cirValue.setAttributeNS (null, 'class', 'cirtxt')
+        cirValue.textContent = value;
+        svg.appendChild(cirValue); //legger til i svg-elementet
+      }
+
+
+      //Legger til URL-ene som har blitt opprettet fra vært gruppemedlem
+      let urls = [
+        'https://bacit.info/hwr/20221220174710-6a4b6104bf63f5854f13207b56ea0266.json', //Felix
+        'https://bacit.info/hwr/20221220175255-b4471211107b628f5fe7d85af5f0cc9b.json', //Thevi
+        'https://bacit.info/hwr/20221220180651-2b340769f3cec5cf7d97ab2aeb314757.json', //Nam
+        'https://bacit.info/hwr/20221220181016-8e70c0da3594b952ff784999dcd54b96.json', //Christian
+        'https://bacit.info/hwr/20221220181447-1ab5a146bc31dac89f19014e6c5e5e99.json', //Adrian
+        'https://bacit.info/hwr/20221220180846-672a84481edb89af72e079b008123b4f.json', //Mohammed
+      ]
+
+
+
+      //Henter trxid og time fra localstorage, og lager en url som legges sammen med de andre urlene
+      if (localStorage.local_trxid) {
+        const trxid = localStorage.getItem('local_trxid');
+        const time = localStorage.getItem('local_time');
+        urls.push('https://bacit.info/hwr/' + time + '-' + trxid + '.json');
+      }
+
+      //setter dataen fra JSON-fil urlene til gruppemedlemmer
+      Promise.all(urls.map(url => fetch(url).then(response => response.json()))).then((data) => {
+        let Felix = data[0];
+        let Christian = data[1];
+        let Nam = data[2];
+        let Thevi = data[3];
+        let Mohammed = data[4];
+        let Adrian = data[5];
+
+
+        //Setter URL-en fra localstorage til en ny "profil", hvis det eksisterer
+        let Lokal = {};
+        if (localStorage.local_trxid) {
+          Lokal = data[6];
+        }
+
+
+        //Data inn i Morgenfugl-Natteravn
+        DrawCir(Felix.age, Felix.fornavn, "yellow", "svg-age");
+        DrawCir(Christian.age, Christian.fornavn, "red", "svg-age");
+        DrawCir(Nam.age, Nam.fornavn, "purple", "svg-age")
+        DrawCir(Thevi.age, Thevi.fornavn, "green", "svg-age")
+        DrawCir(Mohammed.age, Mohammed.fornavn, "orange", "svg-age")
+        DrawCir(Adrian.age, Adrian.fornavn, "blue", "svg-age")
+
+        DrawCir(Lokal.age, Lokal.fornavn, "pink", "svg-age")
+      });
+    </script>
+
+</body>
+</html>
