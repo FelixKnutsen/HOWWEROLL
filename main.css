@@ -1,2 +1,64 @@
 /* Common styles across pages should go here */
 
+/*CSS for the index.html page*/
+body{
+    background-color: antiquewhite;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+h1 {
+    text-align: center;
+    font-size: 400px;
+    margin-top: 10%;
+    rotate: -1deg;
+    font-weight: 600;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+}
+
+li {
+    float: left;
+    border-right:1px solid #bbb;
+}
+
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: white;
+    color: black;
+}
+
+.active {
+    background-color: Darkred;
+}
+
+.footer {
+    list-style-type: none;
+    position: fixed;
+    overflow: hidden;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    background-color: black;
+    text-align: center;
+}
+
+
+
+/*END === CSS for the index.html     page*/
