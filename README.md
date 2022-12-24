@@ -57,8 +57,7 @@ Kombinerer wireframes/sketcher og lager sketcher på hvordan nettsiden skal se u
 :::::::::::::::<br>
 *8./November 2022
 Fikset små ting på scetchene og prøvde å planlegge slik at alle vet hva de skal gjøre slik at vi kan starte å kode nettsiden. <br>
-
-Det stemmer ikke at vi ble enige om å dele opp de forskjellige sidene. Derfor ble den updaten slettet. 
+ 
 Det har ikke kommet opp forslag til- eller diskusjon om videre plan og arbeidsfordeling i gruppens Discord kanal. 
 Det har tvert imot vært taust i gruppens Discord kanal og en uvilje til å samarbeide åpent slik at alle gruppens 
 medlemmer vet hva som foregår. Dette er et brudd på gruppekontrakten. Det er vanskelig å samarbeide om et prosjekt når noen medlemmer kjører sitt eget løp
@@ -67,10 +66,6 @@ Flere må skjerpe seg og ta ansvar for å holde orden i arbeidet, det nytter ikk
 mens andre holder for seg selv. Dette er barnslig og umodent og har allerede gitt negativt utslag på resultatet i andre fag.
 Strukturert arbeid og klar kommunikasjon er måten å lede prosjekter frem, og det er det tydeligvis flere som må lære seg
 selv etter en helt semester med et fag som omhandler samskaping, kommunikasjon og prosjektarbeid, samt en kontrakt som ikke har blitt overholdt. Fra nå av bør samarbeidet skje skriftlig i gruppens Discord kanal.
-
-
--selvom vi har møtt og han ikke deltatt
-:::::::::::::::
 
 *12. Desember 2022
 Oppmøtte: Thevi, Adrian, Nam, Christian og Mohammed
