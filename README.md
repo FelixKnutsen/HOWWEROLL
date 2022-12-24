@@ -58,8 +58,6 @@ Kombinerer wireframes/sketcher og lager sketcher på hvordan nettsiden skal se u
 *8./November 2022
 Fikset små ting på scetchene og prøvde å planlegge slik at alle vet hva de skal gjøre slik at vi kan starte å kode nettsiden. <br>
 
-Gruppen har møtt til møter jevnt ut over hele perioden, der alle enten har enten deltatt eller har gitt grunn til å være borte. dette gjelder alle utenom daniel. vi har flere ganger prøvd å holde kontakt med han, men vi skjønte tidelig at det ikke ville fungere. Det har vært veldig mye problemer i gruppen og resten av gruppen føler det er daniel sin feil. han har valgt å ikke møte opp. han har noen ganger skrevet inn kode eller log som dette:
-"
 Det stemmer ikke at vi ble enige om å dele opp de forskjellige sidene. Derfor ble den updaten slettet. 
 Det har ikke kommet opp forslag til- eller diskusjon om videre plan og arbeidsfordeling i gruppens Discord kanal. 
 Det har tvert imot vært taust i gruppens Discord kanal og en uvilje til å samarbeide åpent slik at alle gruppens 
@@ -68,9 +66,7 @@ uten konkrete mål som hele gruppen kan forholde seg til. Skal ekte samarbeid v�
 Flere må skjerpe seg og ta ansvar for å holde orden i arbeidet, det nytter ikke at enkelte prøver å samarbeide, 
 mens andre holder for seg selv. Dette er barnslig og umodent og har allerede gitt negativt utslag på resultatet i andre fag.
 Strukturert arbeid og klar kommunikasjon er måten å lede prosjekter frem, og det er det tydeligvis flere som må lære seg
-selv etter en helt semester med et fag som omhandler samskaping, kommunikasjon og prosjektarbeid, samt en kontrakt som ikke har blitt overholdt.
-Fra nå av bør samarbeidet skje skriftlig i gruppens Discord kanal.
-"
+selv etter en helt semester med et fag som omhandler samskaping, kommunikasjon og prosjektarbeid, samt en kontrakt som ikke har blitt overholdt. Fra nå av bør samarbeidet skje skriftlig i gruppens Discord kanal.
 
 
 -selvom vi har møtt og han ikke deltatt
